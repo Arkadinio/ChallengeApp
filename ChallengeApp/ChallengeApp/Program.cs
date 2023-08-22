@@ -1,7 +1,7 @@
 ﻿// Lekcja 4
 
 
-var Name = "swa";
+var Name = "Ewa";
 var Gender = "kobieta";
 var Age = 29;
 
