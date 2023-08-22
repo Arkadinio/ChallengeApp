@@ -1,16 +1,16 @@
 ﻿// Lekcja 4
 
 
-var Name = "Ewa";
+var Name = "swa";
 var Gender = "kobieta";
 var Age = 29;
 
 
 if (Age < 30 && Gender == "kobieta")
 {
-    Console.WriteLine("Kobieta poniżej 30 lat");
+    Console.WriteLine(Gender + " poniżej 30 lat");
 }
-else if (Age == 33)
+else if (Age == 33 && Name == "Ewa")
 {
     Console.WriteLine(Name + ", lat 33");
 }
