@@ -1,20 +1,20 @@
 ﻿// Lekcja 4
 
 
-var Name = "Ewa";
-var Gender = "kobieta";
-var Age = 29;
+var name = "Ewa";
+var gender = "kobieta";
+var age = 29;
 
 
-if (Age < 30 && Gender == "kobieta")
+if (age < 30 && gender == "kobieta")
 {
-    Console.WriteLine(Gender + " poniżej 30 lat");
+    Console.WriteLine(gender + " poniżej 30 lat");
 }
-else if (Age == 33 && Name == "Ewa")
+else if (age == 33 && name == "Ewa")
 {
-    Console.WriteLine(Name + ", lat 33");
+    Console.WriteLine(name + ", lat 33");
 }
-else if (Age < 18 && Gender == "mężczyzna")
+else if (age < 18 && gender == "mężczyzna")
 {
     Console.WriteLine("Niepełnoletni Mężczyzna");
 }
