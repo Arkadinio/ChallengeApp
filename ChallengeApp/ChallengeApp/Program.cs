@@ -58,7 +58,7 @@ foreach (char theNumber in letters)
         number9++;
     }
 
-    
+
 }
 
 Console.WriteLine("0 => " + number0);
