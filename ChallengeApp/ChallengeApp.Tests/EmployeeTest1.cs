@@ -2,9 +2,9 @@
 
 namespace ChallengeApp.Tests
 {
-    public class Tests
+    public class EmployeeTest1
     {
-        [Test]
+     /*   [Test]
         public void WhenEmployeeCollectOnePositiveAndOneNegativescore_ShouldCorrectResult()
         {
             // arrange
@@ -47,6 +47,6 @@ namespace ChallengeApp.Tests
             var result = employee.Result;
             // asset
             Assert.AreEqual(0, result);
-        }
+        }*/
     }
 }

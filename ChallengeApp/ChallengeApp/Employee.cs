@@ -11,6 +11,14 @@
 
         private List<int> score = new List<int>();
 
+        public Employee(string name)
+        {
+            this.Name = name;
+        
+
+        }
+
+
         public Employee(string name, string surrname, int age)
         {
             this.Name = name;
