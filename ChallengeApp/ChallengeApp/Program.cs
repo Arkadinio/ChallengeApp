@@ -1,40 +1,15 @@
 ﻿using ChallengeApp;
 
-Employee employee1 = new Employee("Jan", "As", 30);
-Employee employee2 = new Employee("Monika", "Czyszka", 22);
-Employee employee3 = new Employee("Zuzia", "Sandał", 15);
+var employee = new Employee("Adam", "Kamizelich");
 
+employee.AddGrade(2);
+employee.AddGrade(2);
+employee.AddGrade(6);
 
-employee1.AddScore(5);
-employee1.AddScore(9);
-employee1.AddScore(1);
+var statistics = employee.GetStatistics();
 
-employee2.AddScore(2);
-employee2.AddScore(1);
-employee2.AddScore(2);
+Console.WriteLine($"Average: {statistics.Average:N2}");
 
-employee3.AddScore(2);
-employee3.AddScore(3);
-employee3.AddScore(3);
+Console.WriteLine($"Min: {statistics.Min}");
 
-List<Employee> employees = new List<Employee>()
-{
-    employee1, employee2, employee3
-};
-
-int maxResult = -1;
-Employee employeeWithMaxResult = null;
-
-foreach (var employee in employees)
-{
-    if (employee.Result > maxResult)
-    {
-        maxResult = employee.Result;
-        employeeWithMaxResult = employee;
-
-    }
-
-}
-
-Console.WriteLine("Największą ilość punktów posiada użytkownik " + employeeWithMaxResult.Name + " " + employeeWithMaxResult.Surrname + " wiek " + employeeWithMaxResult.Age + " z ilością punktów " + employeeWithMaxResult.Result);
-
+Console.WriteLine($"Max: {statistics.Max}");
