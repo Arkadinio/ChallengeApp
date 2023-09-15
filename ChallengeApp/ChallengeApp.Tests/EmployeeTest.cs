@@ -1,5 +1,3 @@
-
-
 using NUnit.Framework;
 
 namespace ChallengeApp.Tests
@@ -7,39 +5,40 @@ namespace ChallengeApp.Tests
     public class EmployeeTest
     {
         [Test]
-        public void WhenEmployeeResultMin()
+        public void WhenGetStatisticsResultMax()
         {
             // arrange
-            var employee = new Employee("Jan", "As");
-            employee.AddGrade(-5);
+            var employee = new Employee();
+            employee.AddGrade(5);
             employee.AddGrade(8);
+            employee.AddGrade(12);
 
             // act
             var result = employee.GetStatistics();
             // asset
-            Assert.AreEqual(-5, result.Min);
+            Assert.AreEqual(12, result.Max);
         }
 
         [Test]
-        public void WhenEmployeeResultAverage()
+        public void WhenGetStatisticsResultAverageLetter()
         {
             // arrange
-            var employee = new Employee("Monika", "Czyszka");
-            employee.AddGrade(1);
-            employee.AddGrade(2);
-            employee.AddGrade(3);
+            var employee = new Employee();
+            employee.AddGrade(40);
+            employee.AddGrade(50);
+            employee.AddGrade(35);
 
             // act
             var result = employee.GetStatistics();
             // asset
-            Assert.AreEqual(2f, result.Average);
+            Assert.AreEqual('C', result.AverageLetter);
         }
 
         [Test]
-        public void WhenEmployeeResultMax()
+        public void WhenGetStatisticsResultMin()
         {
             // arrange
-            var employee = new Employee("Zuzia", "Sanda³");
+            var employee = new Employee();
             employee.AddGrade(25);
             employee.AddGrade(15);
             employee.AddGrade(-40);
@@ -51,7 +50,41 @@ namespace ChallengeApp.Tests
             // act
             var result = employee.GetStatistics();
             // asset
-            Assert.AreEqual(55, result.Max);
+            Assert.AreEqual(-40, result.Min);
+        }
+
+        [Test]
+        public void WhenGetStatisticsResultLetter()
+        {
+            // arrange
+            var employee = new Employee();
+            employee.AddGrade('A');
+            employee.AddGrade('D');
+
+
+            // act
+            var result = employee.GetStatistics();
+            // asset
+            Assert.AreEqual('B', result.AverageLetter);
+        }
+
+        [Test]
+        public void WhenGetStatisticsResultAll()
+        {
+            // arrange
+            var employee = new Employee();
+            employee.AddGrade(90);
+            employee.AddGrade(60);
+            employee.AddGrade(75);
+
+
+            // act
+            var result = employee.GetStatistics();
+            // asset
+            Assert.AreEqual('B', result.AverageLetter);
+            Assert.AreEqual(90, result.Max);
+            Assert.AreEqual(60, result.Min);
+            Assert.AreEqual(75, result.Average);
         }
     }
 }
