@@ -1,7 +1,12 @@
-﻿namespace ChallengeApp
+﻿using System.Diagnostics.Metrics;
+using System.Runtime.InteropServices;
+
+namespace ChallengeApp
 {
     public class Employee
     {
+
+        private const char sex = 'M';
 
         private List<float> grades = new List<float>();
 
@@ -14,16 +19,17 @@
         {
             this.Name = name;
             this.Surname = surname;
+            
         }
 
         public string Name { get; private set; }
         public string Surname { get; private set; }
 
-        public void AddGrade(double grade)
-        {
-            float gradeFloat = (float)grade;
-            this.AddGrade(gradeFloat);
-        }
+        //public void AddGrade(double grade)
+        //{
+        //    float gradeFloat = (float)grade;
+        //    this.AddGrade(gradeFloat);
+        //}
 
         public void AddGrade(int grade)
         {
@@ -48,7 +54,8 @@
             }
             else
             {
-                Console.WriteLine("Invalid grade value");
+                throw new Exception("Invalid grade value");
+
             }
 
         }
@@ -61,7 +68,8 @@
             }
             else
             {
-                Console.WriteLine("String in not float");
+                throw new Exception("String in not float");
+
             }
 
         }
@@ -92,8 +100,7 @@
                     break;
 
                 default:
-                    Console.WriteLine("Wrong letter");
-                    break;
+                    throw new Exception("Wrong letter");
             }
         }
 
