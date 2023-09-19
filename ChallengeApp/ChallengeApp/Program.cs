@@ -22,7 +22,7 @@ while (true)
     catch (Exception e)
     {
 
-        Console.WriteLine($"Exception catched:  {e.Message }");
+        Console.WriteLine($"Exception catched:  {e.Message}");
     }
 
 }
