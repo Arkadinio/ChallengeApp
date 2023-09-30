@@ -12,7 +12,7 @@ namespace ChallengeApp
 
         public Employee(string name, string surname)
         {
-            this.Name = name;
+            this.Name = name;   
             this.Surname = surname;
         }
 
@@ -23,19 +23,19 @@ namespace ChallengeApp
         public void AddGrade(double grade)
         {
             float gradeFloat = (float)grade;
-            this.AddGrade(gradeFloat);
+           this.AddGrade(gradeFloat);
         }
 
         public void AddGrade(int grade)
         {
-            int gradeInt = (int)grade;
-            this.grades.Add(gradeInt);
+            float result = (float)grade;
+            this.AddGrade(result);
         }
 
         public void AddGrade(long grade)
         {
-            long gradeLong = (long)grade;
-            this.grades.Add(gradeLong);
+            float result = (float)grade;
+            this.AddGrade(result);
         }
 
         public void AddGrade(float grade)
@@ -75,23 +75,23 @@ namespace ChallengeApp
             {
                 case 'A':
                 case 'a':
-                    this.grades.Add(100);
+                    this.AddGrade(100);
                     break;
                 case 'B':
                 case 'b':
-                    this.grades.Add(80);
+                    this.AddGrade(80);
                     break;
                 case 'C':
                 case 'c':
-                    this.grades.Add(60);
+                    this.AddGrade(60);
                     break;
                 case 'D':
                 case 'd':
-                    this.grades.Add(40);
+                    this.AddGrade(40);
                     break;
                 case 'E':
                 case 'e':
-                    this.grades.Add(20);
+                    this.AddGrade(20);
                     break;
 
                 default:
