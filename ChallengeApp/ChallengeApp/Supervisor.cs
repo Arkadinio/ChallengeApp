@@ -22,14 +22,14 @@ namespace ChallengeApp
 
         public void AddGrade(double grade)
         {
-            float gradeFloat = (float)grade;
-            this.AddGrade(gradeFloat);
+            float result = (float)grade;
+            this.AddGrade(result);
         }
 
         public void AddGrade(int grade)
         {
-            int gradeInt = (int)grade;
-            this.grades.Add(gradeInt);
+            float result = (float)grade;
+            this.AddGrade(result);
         }
 
         public void AddGrade(float grade)
