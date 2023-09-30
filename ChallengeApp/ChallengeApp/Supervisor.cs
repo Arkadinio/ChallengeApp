@@ -106,7 +106,7 @@ namespace ChallengeApp
                     break;
                 case "1":
                     this.AddGrade(20);
-                    break; 
+                    break;
                 default:
                     throw new Exception("Wrong grade");
             }
