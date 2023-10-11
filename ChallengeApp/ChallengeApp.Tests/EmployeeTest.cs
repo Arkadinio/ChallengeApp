@@ -8,7 +8,7 @@ namespace ChallengeApp.Tests
         public void WhenGetStatisticsResultMax()
         {
             // arrange
-            var employee = new Employee("Jan","AS");
+            var employee = new EmployeeInMemory("Jan","AS");
             employee.AddGrade(5);
             employee.AddGrade(8);
             employee.AddGrade(12);
@@ -23,7 +23,7 @@ namespace ChallengeApp.Tests
         public void WhenGetStatisticsResultAverageLetter()
         {
             // arrange
-            var employee = new Employee("Jan", "AS");
+            var employee = new EmployeeInMemory("Jan", "AS");
             employee.AddGrade(40);
             employee.AddGrade(50);
             employee.AddGrade(35);
@@ -38,7 +38,7 @@ namespace ChallengeApp.Tests
         public void WhenGetStatisticsResultMin()
         {
             // arrange
-            var employee = new Employee("Jan", "AS");
+            var employee = new EmployeeInMemory("Jan", "AS");
             employee.AddGrade(25);
             employee.AddGrade(15);
             employee.AddGrade(-40);
@@ -57,7 +57,7 @@ namespace ChallengeApp.Tests
         public void WhenGetStatisticsResultLetter()
         {
             // arrange
-            var employee = new Employee("Jan", "AS");
+            var employee = new EmployeeInMemory("Jan", "AS");
             employee.AddGrade('A');
             employee.AddGrade('D');
 
@@ -72,7 +72,7 @@ namespace ChallengeApp.Tests
         public void WhenGetStatisticsResultAll()
         {
             // arrange
-            var employee = new Employee("Jan", "AS");
+            var employee = new EmployeeInMemory("Jan", "AS");
             employee.AddGrade(90);
             employee.AddGrade(60);
             employee.AddGrade(75);
